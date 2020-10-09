@@ -123,7 +123,6 @@ TEST_F(newBankAccountTest, BankAccountStartsEmpty) {
 	EXPECT_EQ(50, account->balance);
 	account->withdraw(20);
 	EXPECT_EQ(30, account->balance);
-
 }
 
 TEST_F(newBankAccountTest, EmptyFinalBalance)
@@ -135,12 +134,18 @@ TEST_F(newBankAccountTest, EmptyFinalBalance)
 TEST_F(newBankAccountTest, deposit200)
 {
 	account->deposit(200);
-	EXPECT_EQ(200, account->balance);
+	EXPECT_EQ(250, account->balance);
 }
 
 TEST_F(newBankAccountTest, deposit300)
 {
 	account->deposit(300);
-	EXPECT_EQ(300, account->balance);
+	EXPECT_EQ(350, account->balance);
+}
+
+TEST_F(newBankAccountTest, deposit400)
+{
+	account->deposit(400);
+	EXPECT_EQ(450, account->balance);
 }
 
