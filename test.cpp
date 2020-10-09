@@ -149,3 +149,9 @@ TEST_F(newBankAccountTest, deposit400)
 	EXPECT_EQ(450, account->balance);
 }
 
+TEST_F(newBankAccountTest, deposit500)
+{
+	account->deposit(500);
+	EXPECT_EQ(550, account->balance);
+}
+
