@@ -131,3 +131,9 @@ TEST_F(newBankAccountTest, EmptyFinalBalance)
 	account->withdraw(account->balance);
 	EXPECT_EQ(0, account->balance);
 }
+
+TEST_F(newBankAccountTest, deposit200)
+{
+	account->deposit(200);
+	EXPECT_EQ(200, account->balance);
+}
